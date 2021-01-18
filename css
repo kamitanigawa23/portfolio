@@ -1,0 +1,662 @@
+@charset "UTF-8";
+body li{
+  list-style: none;
+}
+body a{
+  text-decoration: none;
+  color: black;
+}
+.pc{
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  /* background-color: yellow; */
+}
+.phone{
+  display: none;
+}
+header{
+  background-image: url(img/YAT1213023_TP_V.jpg);
+  height: 100vh;
+  width: 100vw;
+}
+header::before{
+ content: "";
+display: block;
+width: 100%;
+height: auto;
+/* padding-top: 75%; */
+}
+.head{
+  /* background-color: violet; */
+  width: 100%;
+  position: fixed;
+}
+
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上に */
+  cursor: pointer;
+}
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+.drawer-open span:before {
+  bottom: 8px;
+}
+.drawer-open span:after {
+  top: 8px;
+}
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.drawer-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;/* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: .5s;
+}
+#drawer-check:checked ~ .drawer-content {
+  left: 0;/* メニューを画面に入れる */
+}
+
+.head{
+  display: flex;
+  padding-top: 4%;
+  height: 15%;
+  /* margin-top: 5%; */
+  /* background-color: blanchedalmond; */
+}
+.main-logo{
+  /* background-color: blue; */
+  font-size: 2rem;
+  height: 10%;
+  margin-left: 10%;
+}
+.main-logo a{
+  color: white;
+}
+.nav{
+  display: flex; 
+  padding-left: 15%;
+  width: 95%;
+  height: 30%;
+  /* background-color: brown; */
+}
+.main-nav{
+  display: flex;
+  padding-right: 5%;
+  font-size: 1.125rem;
+  width: 80%;
+  
+  /* background-color: burlywood; */
+}
+
+.main-nav li{
+  padding-left: 2%;
+  padding-right: 2%;
+  border-right: 1px solid white;
+  padding-right: 2%;
+}
+
+.main-nav a{
+  color: white;
+  font-size: 0.8rem;
+}
+
+.barger{
+  display: flex;
+  margin-left: 20%;
+  /* background-color: chartreuse; */
+  padding-right: 5%;
+  padding-left: 5%;
+}
+details{
+  padding-right: 10%;
+  color: white;
+}
+.main-write{
+  width: 30%;
+  padding-top: 25%;
+  margin: 0 auto;
+  color: white;
+
+  text-align: center;
+  /* background-color: yellow; */
+}
+.drawer-content{
+  background-color: black;
+}
+.drawer-list{
+  width: 50%;
+  margin: 0 auto;
+  height: 50%;
+  color: white;
+  margin-top: 10%;
+  /* background-color: violet; */
+}
+.drawer-item{
+  /* color: white; */
+  font-size: 1.2rem;
+  line-height: 200%;
+}
+.drawer-item a{
+  color: white;
+}
+.main-navphone{
+  display: none;
+}
+.second-content{
+  /* background-color: violet; */
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+.second-content h2{
+  font-size: 20px;
+}
+.second2{
+  /* background-color: violet; */
+  margin-bottom: 3%;
+}
+.second{
+  /* background-color: yellow; */
+  width: 50%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.6rem;
+}
+.list{
+  margin-top: 4px;
+}
+.list li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.mini-coment{
+  margin-top: 4px;
+  font-size: 12px;
+}
+.phone1{
+  display: none;
+}
+.pc1{
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.phone2{
+  display: none;
+}
+.pc2{
+  display: block;
+  width: 80%;
+  height: 90%;
+  margin-top: 5%;
+}
+.box1{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  /* background-color: blue; */
+}
+.more{
+  /* background-color: blueviolet; */
+  padding-left: 8%;
+}
+.more1{
+  /* background-color: brown; */
+}
+.phone3{
+  display: none;
+}
+.pc3{
+  display: block;
+  width: 248px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.pc4{
+  display: block;
+  width: 116px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.phone4{
+  display: none;
+}
+.more p{
+  font-size: 14px;
+  border: 1px solid black;
+  padding: 0.2rem;
+  width: 60px;
+  text-align: center;
+}
+.mo{
+  /* background-color: blanchedalmond; */
+  width: 500px;
+  margin: 0 auto;
+  padding-left: 160px;
+  margin-top: 5%;
+}
+.more1 p{
+  font-size: 14px;
+  border: 1px solid black;
+  padding: 0.2rem;
+  width: 60px;
+  text-align: center;
+}
+.mo2{
+  /* background-color: blanchedalmond; */
+  width: 500px;
+  margin: 0 auto;
+  padding-left: 160px;
+  margin-top: 5%;
+}
+.phone5{
+  display: none;
+}
+.pc5{
+  display: block;
+  width: 250px;
+  height: 250px;
+}
+.news{
+  /* background-color: blue; */
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+.coment {
+  /* background-color: brown; */
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  margin-bottom: 8%;
+}
+.news1{
+  font-size: 24px;
+  text-align: center;
+}
+.coment p{
+  font-size: 1.2rem;
+  line-height: 200%;
+  text-align: center;
+}
+.more2{
+  font-size: 14px;
+  border: 1px solid black;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  text-align: center;
+  width: 8%;
+  margin: 0 auto;
+  /* background-color: chartreuse; */
+}
+
+.phone6{
+  display: none;
+}
+.pc6{
+  display: block;
+  width: 565px;
+  height: 640px;
+}
+.box2{
+  margin-top: 10%;
+  /* background-color: blanchedalmond; */
+  width: 80%;
+  margin: 0 auto;
+}
+.story{
+  margin-top: 10%;
+  display: flex;
+  /* background-color: blue; */
+}
+.story-1{
+  width: 35%;
+  margin: 0 auto;
+  height: 40%;
+  margin-top: 16%;
+  line-height: 2.3rem;
+  /* background-color: brown; */
+}
+.story-1 h1{
+  padding-bottom: 10%;
+  font-size: 24px;
+}
+.story-1 a{
+  font-size: 14px;
+  border: 1px solid black;
+  padding: 0.2rem;
+  width: 60px;
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 40%;
+}
+.people{
+  display: flex;
+  margin-top: 10%;
+  /* background-color: brown; */
+}
+.people-1{
+  width: 35%;
+  margin: 0 auto;
+  height: 40%;
+  margin-top: 16%;
+  line-height: 2.3rem;
+}
+.people-1 h1{
+  padding-bottom: 10%;
+}
+.people-1 a{
+  font-size: 14px;
+  border: 1px solid black;
+  padding: 0.2rem;
+  width: 60px;
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 40%;
+}
+
+.pc8{
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-right: 1px solid rgb(124, 121, 121);
+  padding-right: 2%;
+  /* padding-left: 2%; */
+  /* padding-right: 1%; */
+}
+.phone8{
+  display: none;
+}
+.phone7{
+  display: none;
+}
+.pc7{
+  display: block;
+  width: 635px;
+  height: 376px;
+}
+.option{
+  /* background-color: brown; */
+  text-align: center;
+  margin: 7% 0;
+}
+.box3{
+  width: 80%;
+  margin:0 auto;
+  display: flex;
+  margin-top: 10%;
+  /* background-color: burlywood; */
+}
+.mini-1{
+  display: flex;
+  margin: 6% 0;
+  letter-spacing: 0.25rem;
+  box-sizing: content-box;
+  /* background-color: blue; */
+}
+.main-1 p{
+  padding-left: 0.25rem;
+}
+.mini{
+  /* background-color: chartreuse; */
+  width: 30%;
+  height: 50%;
+  margin:0 auto;
+  margin-top: 10%;
+}
+.mini-1 p{
+  margin-left: 4%;
+}
+.mini-1 a{
+  /* border: 1px solid rgb(199, 198, 198); */
+  background-color: rgb(184, 182, 182);
+  margin-left: 2%;
+}
+
+.box4{
+  display: flex;
+}
+
+.more3 p{
+  font-size: 14px;
+  border: 1px solid black;
+  padding: 0.2rem;
+  width: 60px;
+  text-align: center;
+  margin-top: 10%;
+}
+.more3{
+  /* background-color: grey; */
+  height: 10%;
+  width: 10%;
+  margin: 0 auto;
+}
+.box4{
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.chizu{
+  display: block;
+}
+.access{
+  margin-left: 5%;
+  margin-top: 10%;
+}
+.map{
+  display: block;
+  width: 600px;
+  height: 450px;
+}
+.map{
+  display: none;
+}
+
+.access h1{
+  padding-bottom: 8%;
+}
+.access p{
+  line-height: 190%;
+}
+.more4{
+  margin-top: 10%;
+  border: 1px solid black;
+  width: 20%;
+  text-align: center;
+}
+.box5{
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 8%;
+  margin-bottom: 10%;
+}
+.box5 h1{
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 5%;
+}
+.coment1{
+  /* background-color: blanchedalmond; */
+  font-size: 14px;
+  letter-spacing: 0.25rem;
+  padding-bottom: 2%;
+}
+.box5 li{
+  font-size: 14px;
+}
+.i{
+  font-size: 12px;
+  letter-spacing: 0.25rem;
+}
+
+.box6 a{
+  display: block;
+  text-align: center;
+}
+.box6{
+  width: 50%;
+  margin: 0 auto;
+  /* background-color: blueviolet; */
+}
+.reservation{
+  border: 1px solid rgb(151, 150, 150);
+  width: 40%;
+  /* background-color: blue; */
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding: 0.5% 1.4%;
+  margin-bottom: 7%;
+}
+.reservation:hover{
+  color: rgb(168, 151, 55);
+}
+.goto{
+  font-size: 12px;
+}
+.goto:hover{
+  color: rgb(168, 151, 55);
+}
+
+.pc9{
+  display: block;
+  width: 12%;
+  height: 11%;
+  /* background-color: gray; */
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+.phone9{
+  display: none;
+}
+
+.box7{
+  /* background-colo?r: gold; */
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  /* height: 80%; */
+}
+.box7{
+  font-size: 12px;
+}
+.logo1{
+  background-color: gray;
+}
+.contact1{
+  /* background-color: green; */
+  text-align: center;
+  color: rgb(168, 151, 55);
+}
+.box8{
+  /* background-color: hotpink; */
+  display: flex;
+  margin-top: 4%;
+}
+.mini2{
+  /* background-color: blue; */
+  margin-right: 10%;
+  font-size: 12px;
+  margin-left: 36%;
+  text-align: center;
+
+}
+.mini3{
+  /* background-color: brown; */
+  font-size: 12px;
+  text-align: center;
+}
+/* .mini2 p{
+  padding-left: 30%;
+}
+.mini3 p{
+  padding-left: 40%;
+} */
+a:hover{
+  color: rgb(168, 151, 55);
+}
+.list1{
+  /* background-color: brown; */
+  justify-content: space-between;
+  display: flex;
+  margin-top: 4%;
+}
+.img3{
+  /* background-color: brown; */
+  margin-top: 3%;
+  display: flex;
+  padding-left: 3%;
+  padding-right: 3%;
+  /* width: 40%; */
+  /* height: 60%; */
+}
+.img3 a{
+  padding-right: 3%;
+}
+.pc10{
+  display: block;
+  margin-left: 5%;
+  /* margin-right: 5%; */
+}
+.phone10{
+  display: none;
+}
+.pc11{
+  display: block;
+  width: 30px;
+  height: 30px;
+  /* background-color: cadetblue; */
+}
+.phone11{
+  display: none;
+}
+
+
+
